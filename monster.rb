@@ -9,14 +9,18 @@ class Monster
     @mana = mana
   end
 
+  def list_attributes
+    puts name
+    puts "#{name}'s height is #{height}"
+    puts "#{name}'s strength is #{strength}"
+    puts "#{name}'s health points are #{health_points}"
+    puts "#{name}'s mana is #{mana}"
+  end
+
   def attack(target)
 
   end
 end
 
 zoidberg = Monster.new("Zoidberg", 50, 4, 80, 0)
-puts zoidberg.name
-puts "#{zoidberg.name}'s height is #{zoidberg.height}"
-puts "#{zoidberg.name}'s strength is #{zoidberg.strength}"
-puts "#{zoidberg.name}'s health points are #{zoidberg.health_points}"
-puts "#{zoidberg.name}'s mana is #{zoidberg.mana}"
+zoidberg.list_attributes
