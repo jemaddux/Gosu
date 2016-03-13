@@ -20,20 +20,20 @@ class Monster
 
   def list_attributes
     puts name
-    # puts "#{name}'s height is #{height}"
-    list_attribute(height, "height")
-    # puts "#{name}'s strength is #{strength}"
-    list_attribute(strength, "strength")
-    # puts "#{name}'s health points are #{health_points}"
-    list_attribute(health_points, "health points")
-    # puts "#{name}'s mana is #{mana}"
-    list_attribute(mana, "mana")
+    attributes = [
+      [height, "height"],
+      [strength, "strength"],
+      [health_points, "health points"],
+      [mana, "mana"]
+    ]
+    attributes.each do |attribute, attribute_name|
+      list_attribute(attribute, attribute_name)
+    end
   end
 
   def attack(target)
 
   end
-
 end
 
 zoidberg = Monster.new("Zoidberg", 50, 4, 80, 0)
